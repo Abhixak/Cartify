@@ -2,6 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    margin: 0px 10px;
+    background-color: #fafafa;
+    /*background-image: linear-gradient(rgb(0, 0, 0),hsl(0, 100%, 63%));*/
+}
 @media screen and (min-width: 450px) {
     .container{
         visibility: hidden;
@@ -41,7 +46,9 @@
 .navbar{
     background-color: hsl(209, 100%, 94%);
     padding: 5px 2px;
-    border-bottom: 1px solid hsl(240, 100%, 95%);
+    border-radius:0px 0px 5px 5px;
+    border: 1px solid hsla(240, 100%, 88%, 0.3);
+    /* border-bottom: 1px solid hsl(240, 100%, 95%); */
     box-shadow: 5px 5px 10px rgba(187, 187, 255, 0.434);
 }
 #icon{
@@ -61,7 +68,7 @@
     color: rgb(84, 84, 255);
 }
 .btngroup{
-    margin-left: 20%;
+    margin-left: 25%;
 }
 .map{
     max-width: 100%;

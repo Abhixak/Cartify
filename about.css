@@ -3,6 +3,7 @@
     padding: 0px;
 }
 body{
+    margin: 0px 10px;
     background-color: #fafafa;
     /*background-image: linear-gradient(rgb(0, 0, 0),hsl(0, 100%, 63%));*/
 }
@@ -45,7 +46,9 @@ body{
 .navbar{
     background-color: hsl(209, 100%, 94%);
     padding: 5px 2px;
-    border-bottom: 1px solid hsl(240, 100%, 95%);
+    height: auto;
+    border-radius:0px 0px 5px 5px;
+    border: 1px solid hsl(240, 100%, 88%,0.3);
     box-shadow: 5px 5px 10px rgba(187, 187, 255, 0.434);
 }
 #icon{
@@ -65,7 +68,7 @@ body{
     color: rgb(84, 84, 255);
 }
 .btngroup{
-    margin-left: 20%;
+    margin-left: 25%;
 }
 
 .use,.alldata{
@@ -82,7 +85,8 @@ body{
 .alldata h1,.alldata h3{
     font-size: 12px;
     margin-bottom: 5px;
-    max-block-size: 100%;
+    /* text-align: center; */
+    /* max-block-size: 100%; */
 }
 .alldata p{
     font-size: 10px;
@@ -93,7 +97,76 @@ body{
     border-radius: 5px;
     max-width: 100%;
 }
+.images{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.images2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .use h3{
     font-size: 12px;
     margin-bottom: 10px;
 }
+
+.title-word {
+    animation: color-animation 2s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .titletxt {
+    margin-top: 10px;
+    display: grid;
+    text-align: center;
+    border-radius: 3px;
+    /* border-top: 1px solid rgba(0, 0, 0, 0.45); */
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+  }
