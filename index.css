@@ -41,7 +41,6 @@
     color: hsl(191, 87%, 63%);
 }
 .navbar{
-    margin: 0px 10px;    
     /*background-image: linear-gradient(rgb(0, 0, 0),hsl(0, 100%, 63%));*/
     background-color: hsl(209, 100%, 94%);
     padding: 5px 2px;
@@ -70,12 +69,10 @@
     margin-left: 20%;
 }
 
-
-
 header{
 	width: 100vw;
 	min-height: 100vh;
-	background: #34495e;
+	/* background: #ffffff; */
 	font-size: 1.2rem;
 	display: flex;
 	justify-content: center;
