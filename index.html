@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX:CARTIFY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $(".generate_qr").click(function() {
+              $(".form").hide();
+              $(".qr_code").show();
+              var num = $(".number").val();
+              var link = "upi://pay?pa=onkarjha2003@sbi%26am=1500%26tn=" + num;
+              var upi = "https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=" + link;
+              console.log(upi);
+              $(".get_qr").attr("src", upi);
+          });
+          $(".download_now").click(function() {
+              var name = $(".name").val();
+              var num = $(".number").val();
+              var email = $(".email").val();
+              var id = $(".id").val();
+              if (num != "" && name != "" && email != "" && id != "") {
+                  /*$.post("back.php",{name:name,num:num,email:email,id:id},function(res) {
+                    if(res==1){
+
+                    }
+                    else{
+
+                    }
+                  });*/
+              } else {
+                  alert("Fill all fields correctly");
+              }
+          });
+      });
+  </script>
+</head>
+<body>
+    <div class="all">
+        <nav class="navbar">
+            <h2 class="logotext">CARTI<span class="logotext2">FY</span></h2>
+            <span class="btngroup">
+                <a href="index.html" class="payment" id="icon">PAYMENT</a>
+                <a href="about.html" class="about" id="icon">ABOUT</a>
+                <a href="help.html" class="help" id="icon">HELP</a>
+            </span>
+        </nav>
+        
+        <header>
+          
+          <div class="container">
+            <div class="left">
+
+              <div id="qr" class="qr" style="position: relative;top: 20px;background-color: rgba(255, 255, 255, 0.813);height: auto; display: flex;flex-direction: column; justify-content: center; align-items: center; ">
+                <img src="PAYME.jpg" alt="" height="200px">
+        
+                <input type="text" style="border: 0px;border-bottom:1px solid black ;text-align: center; width: 17em;" value="abhishekkumar2526105@okhdfcbank" id="copyText" readonly>
+                <br>
+                <button style="padding: 2px;" class="copy-btn" onclick="copyToClipboard()">Copy UPI ID</button><br>
+        
+              </div>
+              <br>
+              <div class="right">
+                <hr>
+                <h3>PAYMENT</h3>
+                <form>
+                  <!--
+                  <input type="submit" onclick="gpay()" name="" value="Click here to Pay Via UPI">
+                  <br>
+                  <br>-->
+                  Accepted Card <br>
+                  <img src="card1.png" width="100">
+                  <img src="card2.png" width="50">
+                  <br><br>
+          
+                  Credit/Debit card number
+                <input type="text" name="" placeholder="Enter card number">
+                  
+                  Exp month
+                  <input type="text" name="" placeholder="Enter Month">
+                  <div id="zip">
+                    <label>
+                      Exp year
+                      <select>
+                        <option>Choose Year..</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                      </select>
+                    </label>
+                      <label>
+                      CVV
+                      <input type="number" name="" placeholder="CVV">
+                    </label>
+                  </div>
+                </form>
+                <input type="submit" name="" value="Proceed to Checkout">
+              </div>
+            </div>
+          </header>
+        </div>
+  
+
+<!-- 
+
+              <h3>BILLING ADDRESS</h3>
+              <form>
+                Full name
+                <input type="text" name="" placeholder="Enter name">
+                Email
+                <input type="text" name="" placeholder="Enter email">
+        
+                Address
+                <input type="text" name="" placeholder="Enter address">
+                
+                City
+                <input type="text" name="" placeholder="Enter City">
+                <div id="zip">
+                  <label>
+                    State
+                    <select>
+                      <option>Choose State..</option>
+                      <option>Rajasthan</option>
+                      <option>Hariyana</option>
+                      <option>Uttar Pradesh</option>
+                      <option>Madhya Pradesh</option>
+                    </select>
+                  </label>
+                    <label>
+                    Zip code
+                    <input type="number" name="" placeholder="Zip code">
+                  </label>
+                </div>
+              </form> -->
+            </div>
+          
+            
+     
+
+    <h2 class="hiddenText"><marquee scrollamount="15">KINDLY OPEN THIS WEBSITE IN MOBILE PHONE</marquee></h2>
+    <script>
+      function copyToClipboard() {
+        var copyText = document.getElementById("copyText");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("UPI Copied, Now paste this UPI ID " + copyText.value+" in your Payment Application.");
+}
+
+    </script>
+</body>
+</html>

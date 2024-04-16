@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELP:CARTIFY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">   <link rel="stylesheet" href="help.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h2 class="logotext">CARTI<span class="logotext2">FY</span></h2>
+            <span class="btngroup">
+                <a href="index.html" class="payment" id="icon">PAYMENT</a>
+                <a href="about.html" class="about" id="icon">ABOUT</a>
+                <a href="help.html" class="help" id="icon">HELP</a>
+            </span>
+            
+        </nav>  
+        <section class="contact">
+            <h3>
+                CONTACT US
+            </h3>
+            <div class="call">
+                <button onclick="sendEmail()">CLICK HERE TO SEND EMAIL</button>
+                <p>CALL : +91-8381927462</p>
+            </div>
+        </section>  
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27431.924867612513!2d76.65315269999999!3d30.746765299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe555e7bf2e91%3A0xffb409b433075d3!2sKharar%2C%20Punjab%20140301!5e0!3m2!1sen!2sin!4v1713164692765!5m2!1sen!2sin" width="80%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </section>
+        
+    </div>
+
+    <h2 class="hiddenText"><marquee scrollamount="15">KINDLY OPEN THIS WEBSITE IN MOBILE PHONE</marquee></h2>
+<script>
+    function sendEmail() {
+        var emailAddress = "cartifysupport@gmail.com.com";
+        var subject = "ISSUE REGARDING";
+        var body = "Hello Sir, ";
+    
+        var mailtoLink = "mailto:" + encodeURIComponent(emailAddress) + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    
+        window.location.href = mailtoLink;
+    }
+</script>
+</body>
+</html>
